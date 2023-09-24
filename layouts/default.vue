@@ -1,5 +1,5 @@
 <script setup>
-	import NavBar from "../components/Navbar.vue";
+	import NavBar from "../components/NavBar.vue";
 	import Island from "../components/Island.vue";
 </script>
 
