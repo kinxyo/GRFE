@@ -414,7 +414,7 @@
 		/* width: vw; */
 		background-color: transparent;
 		display: flex;
-		justify-content: end;
+		justify-content: flex-end;
 		/* justify-content: space-between; */
 		/* border-bottom: 2px solid green; */
 		/* gap: 1em; */
