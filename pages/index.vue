@@ -16,9 +16,9 @@
 						</p>
 					</div>
 					<div class="important-buttons">
-						<NuxtLink class="button" to="">Lodge</NuxtLink>
-						<NuxtLink class="button" to="">View Status</NuxtLink>
-						<NuxtLink class="button" to="">Appeal</NuxtLink>
+						<NuxtLink class="button" to="">Contact Us</NuxtLink>
+						<NuxtLink class="button" to="">FAQ</NuxtLink>
+						<NuxtLink class="button" to="">About Us</NuxtLink>
 					</div>
 				</div>
 
@@ -79,7 +79,7 @@
 		place-items: center;
 		gap: 5px;
 		/* height: 100vh; */
-		/* border: 2px solid slateblue; */
+		/* border: 2px solid 	slateblue; */
 	}
 	.text {
 		text-align: center;

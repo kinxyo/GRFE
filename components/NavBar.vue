@@ -55,12 +55,12 @@
 			<div class="more-options">
 				<NuxtLink class="butt" to="/">Home</NuxtLink>
 				<NuxtLink active-class="open" class="butt" to="/contact"
-					>Contact Us</NuxtLink
+					>Dashboard</NuxtLink
 				>
 				<NuxtLink active-class="open" class="butt" to="/about"
-					>About Us</NuxtLink
+					>Lodge</NuxtLink
 				>
-				<NuxtLink active-class="open" class="butt" to="/faq">FAQ</NuxtLink>
+				<NuxtLink active-class="open" class="butt" to="/faq">Appeal</NuxtLink>
 			</div>
 		</div>
 
