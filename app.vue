@@ -6,28 +6,16 @@
 </script>
 <template>
 	<div class="main-containter-app">
-		<!-- <Curtain v-if="y <= 717" ref="el" /> -->
+		<Curtain v-if="y <= 717" ref="el" />
 		<NuxtLayout>
 			<NuxtPage />
 		</NuxtLayout>
 	</div>
-	<!-- <div style="border: 2px solid pink;">
-		HI
-	</div> -->
 </template>
 
 <style>
-	/* body {
-		box-sizing: border-box;
-	} */
-	/* * {
-		box-sizing: border-box;
-	} */
 	body {
-		/* padding: 0 0; */
 		margin: 0;
-		/* background-color: pink; */
-		/* border: 2px solid slateblue; */
 		background: linear-gradient(315deg, #a3abb4 0%, #cbd5e1 50%, #dde7f3 100%);
 		overflow-y: scroll;
 		overflow-x: hidden;
@@ -40,6 +28,8 @@
 	* {
 		scrollbar-width: thin;
 		scrollbar-color: rgba(255, 0, 111, 0) transparent;
+		box-sizing: border-box;
+		/* box-sizing: content-box; */
 	}
 	.page-enter-active,
 	.page-leave-active {
@@ -47,10 +37,7 @@
 	}
 	.page-enter-from,
 	.page-leave-to {
-		/* opacity: 0; */
 		transform: translateX(30px);
-		/* position: absolute; */
-		/* filter: blur(1rem); */
 	}
 
 	.page-move {

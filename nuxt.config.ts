@@ -4,7 +4,7 @@ export default defineNuxtConfig({
   app: {
     pageTransition: { name: 'page', mode: 'out-in' }
   },
-  modules: ["@nuxtjs/google-fonts",'nuxt-icon'],
+  modules: ["@nuxtjs/google-fonts",'nuxt-icon','@nuxtjs/tailwindcss'],
   googleFonts: {
     families: {
       "Space+Grotesk": true,
