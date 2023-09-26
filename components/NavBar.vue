@@ -58,103 +58,7 @@
 		</div>
 
 		<!-- modals -->
-		<dialog class="lang-selector" ref="modal" appear>
-			<ul>
-				<li>English</li>
-				<li>Hindi</li>
-				<li>Marathi</li>
-				<li>Bengali</li>
-				<li>Telegu</li>
-				<li>Tamil</li>
-				<li>Urdu</li>
-				<li>Gujarati</li>
-				<li>Odia</li>
-				<li>Kannada</li>
-				<li>Malyalam</li>
-				<li>Punjabi</li>
-				<li>Punjabi</li>
-				<li>Assamese</li>
-				<li>Maithi</li>
-				<li>Meiti</li>
-				<li>Sanskrit</li>
-			</ul>
-			<div class="end">
-				<button @click="modal.close()">Close</button>
-			</div>
-		</dialog>
-
-		<dialog class="portal" ref="login">
-			<div class="contentd">
-				<div class="form">
-					<input placeholder="username" />
-					<input placeholder="password" />
-				</div>
-				<div class="buttons">
-					<button @click="login.close()">Close</button>
-					<button>Login</button>
-				</div>
-			</div>
-		</dialog>
-
-		<dialog class="searchbox" ref="search">
-			<div class="container">
-				<div class="side-panel">
-					<div class="upper">
-						<input
-							@keyup.enter="logging"
-							v-model.trim="searchtext"
-							placeholder="search by name"
-							type="text" />
-					</div>
-
-					<div class="lower">
-						<div class="tags">
-							<p>Agriculture Research and Education</p>
-							<p>Atomic Energy</p>
-							<p>Ayush</p>
-							<p>Bio Technology</p>
-							<p>Central Board of Excise and Customs</p>
-							<p>Chemicals and Petrochemicals</p>
-							<p>Central Board of Direct Taxes (Income Tax)</p>
-						</div>
-						<div>
-							<button
-								@click="search.close()"
-								class="closebtn"
-								style="
-									transition: 0.1s linear;
-									padding: 5px;
-									background-color: rgba(43, 42, 45, 0.251);
-									border: none;
-									border-radius: 5px;
-									font-family: Space Grotesk;
-									margin-top: 5px;
-									cursor: pointer;
-								">
-								Close
-							</button>
-						</div>
-					</div>
-				</div>
-
-				<div class="main-content">
-					<table style="width: 100%">
-						<tr>
-							<th style="width: 10%">S.No</th>
-							<th>Officer Name</th>
-							<th>Contact</th>
-						</tr>
-						<TransitionGroup name="tableset" appear>
-							<tr v-for="i in dataset" :key="i.sno">
-								<td>{{ i.sno }}</td>
-								<td>{{ i.name }}</td>
-								<td>{{ i.email }}</td>
-							</tr>
-						</TransitionGroup>
-					</table>
-				</div>
-			</div>
-		</dialog>
+		
 
 		<!--  -->
 	</main>
@@ -358,9 +262,6 @@
 		}
 	}
 	@media (max-width: 546px) {
-		#link-container {
-			border: 2px solid slateblue;
-		}
 		#quick-link {
 			display: grid;
 			place-items: end;
