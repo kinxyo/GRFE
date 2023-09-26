@@ -1,6 +1,6 @@
 <template>
 	<div class="grid grid-rows-2 gap-12">
-		<div class="grid place-items-center gap-6">
+		<div class=" grid place-items-center gap-6">
 			<div class="font-spacegro text-center w-1/4 text-xl flex-col flex gap-5">
 				<div class="grid grid-rows-2 place-items-center gap-3">
 					<img class="h-28" src="/india.png" />

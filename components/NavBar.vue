@@ -1,4 +1,7 @@
 <script setup>
+	// const searchmodal = ref(false);
+	// const langmodal = ref(false);
+	// const accmodal = ref(false);
 	import q from "../data/info.json";
 
 	const modal = ref(null);
@@ -25,46 +28,217 @@
 		search.value.focus();
 	});
 </script>
-
 <template>
-	<main class="flex justify-between px-6">
-		<img class="mt-20 w-80" src="/logo.png" />
-		<div id="link-container" class="flex gap-2 justify-center flex-col">
-			<div class="self-end flex gap-1 text-3xl">
+	<main class="header flex justify-end p-10">
+		<slot />
+		<div id="link-container" class="flex gap-5 justify-center flex-col">
+			<div class="upper-logos self-end flex gap-4 text-3xl">
 				<!-- <Icon style="cursor: pointer;" name="mdi:language-box" /> -->
+				<Icon @click="search.showModal()" id="lang" style="cursor: pointer" name="line-md:search" />
+				
 				<Icon
-					id="lang"
-					@click="search.showModal()"
-					style="cursor: pointer"
-					name="line-md:search" />
+				@click="modal.showModal()"
+				id="lang"
+				style="cursor: pointer"
+				name="material-symbols:language" />
 				<Icon
-					id="lang"
-					@click="modal.showModal()"
-					style="cursor: pointer"
-					name="material-symbols:language" />
-				<Icon
+				@click="login.showModal()"
 					id="account"
-					@click="login.showModal()"
 					style="cursor: pointer"
 					name="material-symbols:account-circle" />
 			</div>
 			<!-- <div id="space-saver">=</div> -->
-			<div id="quick-link" class="flex flex-nowrap shrink-0 gap-5 text-2xl font-pathex font-black items-baseline">
+			<div
+				id="quick-link"
+				class="flex flex-nowrap shrink-0 gap-8 text-2xl font-pathex items-baseline">
 				<NuxtLink class="butt" to="/">Home</NuxtLink>
 				<NuxtLink active-class="open" class="butt" to="/about">Lodge</NuxtLink>
-				<NuxtLink active-class="open" class="butt" to="/contact">Dashboard</NuxtLink>
+				<NuxtLink active-class="open" class="butt" to="/contact"
+					>Dashboard</NuxtLink
+				>
 				<NuxtLink active-class="open" class="butt" to="/faq">Appeal</NuxtLink>
 			</div>
 		</div>
 
 		<!-- modals -->
-		
+		<!-- <Modal v-if="searchmodal"><h1>Search</h1></Modal>
+		<Modal v-if="langmodal"><h1>Change Language</h1></Modal>
+		<Modal v-if="accmodal"><h1>Edit Profile</h1></Modal> -->
+
+		<dialog class="lang-selector" ref="modal" appear>
+			<ul>
+				<li>English</li>
+				<li>Hindi</li>
+				<li>Marathi</li>
+				<li>Bengali</li>
+				<li>Telegu</li>
+				<li>Tamil</li>
+				<li>Urdu</li>
+				<li>Gujarati</li>
+				<li>Odia</li>
+				<li>Kannada</li>
+				<li>Malyalam</li>
+				<li>Punjabi</li>
+				<li>Punjabi</li>
+				<li>Assamese</li>
+				<li>Maithi</li>
+				<li>Meiti</li>
+				<li>Sanskrit</li>
+			</ul>
+			<div class="end">
+				<button @click="modal.close()">Close</button>
+			</div>
+		</dialog>
+
+		<dialog class="portal" ref="login">
+			<div class="contentd">
+				<div class="form">
+					<input placeholder="username" />
+					<input placeholder="password" />
+				</div>
+				<div class="buttons">
+					<button @click="login.close()">Close</button>
+					<button>Login</button>
+				</div>
+			</div>
+		</dialog>
+
+		<dialog class="searchbox" ref="search">
+			<div class="container">
+				<div class="side-panel">
+					<div class="upper">
+						<input
+							@keyup.enter="logging"
+							v-model.trim="searchtext"
+							placeholder="search by name"
+							type="text" />
+					</div>
+
+					<div class="lower">
+						<div class="tags">
+							<p>Agriculture Research and Education</p>
+							<p>Atomic Energy</p>
+							<p>Ayush</p>
+							<p>Bio Technology</p>
+							<p>Central Board of Excise and Customs</p>
+							<p>Chemicals and Petrochemicals</p>
+							<p>Central Board of Direct Taxes (Income Tax)</p>
+						</div>
+						<div>
+							<button
+								@click="search.close()"
+								class="closebtn"
+								style="
+									transition: 0.1s linear;
+									padding: 5px;
+									background-color: rgba(43, 42, 45, 0.251);
+									border: none;
+									border-radius: 5px;
+									font-family: Space Grotesk;
+									margin-top: 5px;
+									cursor: pointer;
+								">
+								Close
+							</button>
+						</div>
+					</div>
+				</div>
+
+				<div class="main-content">
+					<table style="width: 100%">
+						<tr>
+							<th style="width: 10%">S.No</th>
+							<th>Officer Name</th>
+							<th>Contact</th>
+						</tr>
+						<TransitionGroup name="tableset" appear>
+							<tr v-for="i in dataset" :key="i.sno">
+								<td>{{ i.sno }}</td>
+								<td>{{ i.name }}</td>
+								<td>{{ i.email }}</td>
+							</tr>
+						</TransitionGroup>
+					</table>
+				</div>
+			</div>
+		</dialog>
 
 		<!--  -->
 	</main>
 </template>
 
 <style scoped>
+	#quick-link {
+		font-weight: 900;
+	}
+	@media (max-width: 722px) {
+		main {
+			padding-inline: 0.5rem;
+		}
+		#quick-link {
+			font-size: 1rem;
+		}
+	}
+	@media (max-width: 546px) {
+		#quick-link {
+			display: grid;
+			place-items: end;
+			grid-template-columns: 1fr 1fr;
+			font-size: medium;
+			gap: 0.5rem;
+		}
+	}
+	.butt {
+		text-decoration: none;
+		color: black;
+		flex-shrink: 0;
+		margin-bottom: 2%;
+		transition: 0.2s ease-in-out;
+		cursor: pointer;
+	}
+	.butt:hover {
+		border-bottom: 4px solid rgb(225, 12, 108);
+		margin: -4px;
+	}
+
+	#lang:hover,
+	#account:hover {
+		animation: pop 0.3s ease-in-out;
+	}
+
+	@keyframes pop {
+		0% {
+			transform: translateY(0);
+		}
+		50% {
+			transform: translateY(-5px);
+		}
+		100% {
+			transform: translateY(0);
+		}
+	}
+	.tableset-enter-from {
+		opacity: 0;
+		/* transform: scale(0); */
+	}
+	.tableset-leave-to {
+		opacity: 0;
+		transform: scale(0);
+	}
+
+	.tableset-enter-active {
+		transition: all 0.3s cubic-bezier(1, 0.5, 0.8, 1);
+	}
+	.tableset-leave-active {
+		transition: all 0.4s ease;
+		position: absolute;
+	}
+	.tableset-move {
+		transition: all 0.3s ease;
+	}
+
+	/* modals */
+
 	.closebtn:hover {
 		filter: brightness(0.8);
 		padding: 10px;
@@ -241,84 +415,7 @@
 		border-bottom: 4px solid rgb(225, 12, 108);
 		margin: -4px;
 	}
-	@media (max-width: 764px) {
-		img {
-			height: 5rem;
-			width: 12rem;
-			margin-left: 0.5rem;
-		}
-	}
-	@media (max-width: 672px) {
-		main {
-			padding-inline: 0.5rem;
-		}
-		#quick-link {
-			font-size: 1rem;
-		}
-		img {
-			height: 6rem;
-			width: 15rem;
-			margin-left: 0.5rem;
-		}
-	}
-	@media (max-width: 546px) {
-		#quick-link {
-			display: grid;
-			place-items: end;
-			grid-template-columns: 1fr 1fr;
-			font-size: medium;
-			gap: 0.5rem;
-		}
-	}
-	.butt {
-		/* border: 2px solid slateblue; */
-		text-decoration: none;
-		color: black;
-		flex-shrink: 0;
-		margin-bottom: 2%;
-		transition: 0.2s ease-in-out;
-		cursor: pointer;
-	}
-	.butt:hover {
-		border-bottom: 4px solid rgb(225, 12, 108);
-		margin: -4px;
-	}
+	
 
-	#lang:hover,
-	#account:hover {
-		animation: pop 0.3s ease-in-out;
-	}
 
-	@keyframes pop {
-		0% {
-			transform: translateY(0);
-		}
-		50% {
-			transform: translateY(-5px);
-		}
-		100% {
-			transform: translateY(0);
-		}
-	}
-	.tableset-enter-from {
-		opacity: 0;
-		/* transform: scale(0); */
-	}
-	.tableset-leave-to {
-		opacity: 0;
-		transform: scale(0);
-	}
-
-	.tableset-enter-active {
-		transition: all 0.3s cubic-bezier(1, 0.5, 0.8, 1);
-	}
-	.tableset-leave-active {
-		transition: all 0.4s ease;
-		position: absolute;
-	}
-	.tableset-move {
-		transition: all 0.3s ease;
-	}
-
-	/* media queries */
 </style>
