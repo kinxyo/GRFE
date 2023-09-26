@@ -1,22 +1,25 @@
 <template>
-	<div class="min-h-screen relative">
-		<NavBar class="relative">
-			<nuxt-img
+	<div class="min-h-screen relative flex flex-col">
+		<NavBar>
+			<img
 				id="logo"
 				class="absolute left-16 top-14"
-				sizes="100vw sm:50vw md:400px"
 				src="/logo.png" />
 		</NavBar>
 		<Bg />
 		<slot />
 		<div
-			class="font-rubik p-5 absolute bottom-0 inset-x-0 text-center text-slate-50 bg-black">
+			class="footer font-rubik p-5 justify-end bottom-0 inset-x-0 text-center text-slate-50 bg-black">
 			<h4>All rights reserved. Government of India.</h4>
 		</div>
 	</div>
 </template>
 
 <style scoped>
+	#logo {
+		width: 27rem;
+		/* height: ; */
+	}
 	@media (max-width: 958px) {
 		#logo {
 			height: 5rem;

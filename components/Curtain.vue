@@ -19,7 +19,7 @@
 	}); */
 </script>
 <template>
-	<main>
+	<main class="z-3">
 		<section id="relevant">
 			<div class="info">
 				<div id="about">
@@ -32,10 +32,7 @@
 							related to service delivery. It is a single portal connected to
 							all the Ministries/Departments of Government of India and States.
 							Every Ministry and States have role-based access to this system.
-							CPGRAMS is also accessible to the citizens through standalone
-							mobile application downloadable through Google Play store and
-							mobile application integrated with UMANG. The status of the
-							grievance filed in CPGRAMS can be tracked with the unique
+							The status of the grievance filed in CPGRAMS can be tracked with the unique
 							registration ID provided at the time of registration of the
 							complainant. CPGRAMS also provides appeal facility to the citizens
 							if they are not satisfied with the resolution by the Grievance

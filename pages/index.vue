@@ -1,7 +1,7 @@
 <template>
-	<div class="grid grid-rows-2 gap-12">
-		<div class=" grid place-items-center gap-6">
-			<div class="font-spacegro text-center w-1/4 text-xl flex-col flex gap-5">
+	<div class="index-container grid grid-rows-2 gap-12">
+		<div class="homepage-intro grid place-items-center gap-6">
+			<div class="intro-text font-spacegro text-center w-1/4 text-xl flex-col flex gap-5">
 				<div class="grid grid-rows-2 place-items-center gap-3">
 					<img class="h-28" src="/india.png" />
 					<h1 class="font-rubik font-black text-2xl">
@@ -23,7 +23,7 @@
 
 		<div class="grid grid-cols-3 features">
 			<section id="one">
-				<Icon size="180" name="game-icons:artificial-intelligence" />
+				<Icon class="flogo" size="180" name="game-icons:artificial-intelligence" />
 				<h2>AI Assistance</h2>
 				<div class="detail">
 					<p>
@@ -33,7 +33,7 @@
 				</div>
 			</section>
 			<section id="two">
-				<Icon size="180" name="uil:language" />
+				<Icon class="flogo" size="180" name="uil:language" />
 				<h2>Multilingual</h2>
 				<div class="detail">
 					<p>
@@ -43,7 +43,7 @@
 				</div>
 			</section>
 			<section id="three">
-				<Icon size="180" name="material-symbols:spatial-tracking-rounded" />
+				<Icon class="flogo" size="180" name="material-symbols:spatial-tracking-rounded" />
 				<h2>Realtime-Tracking</h2>
 				<div class="detail">
 					<p>
@@ -97,18 +97,20 @@
 		text-align: center;
 	}
 
-	@media (max-width: 964px) {
-	}
-
-	@media (max-width: 866px) {
-		#one, #two, #three {
-			flex-direction: row;
+	@media (max-width: 944px) {
+		.intro-text {
+			width: 50%;
 		}
+		.detail {
+			/* border: 2px solid red; */
+			width: 80%;
+		}
+
 	}
 
-	@media (max-width: 648px) {
-	}
-
-	@media (max-width: 506px) {
+	@media (max-width: 598px) {
+		.flogo {
+			padding: 15%;
+		}
 	}
 </style>

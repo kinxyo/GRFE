@@ -1,5 +1,6 @@
 <template>
 	<main>
+		<div class="clouds">
 		<img
 			style="right: -20%; top: 0; animation-duration: 20s"
 			id="cloud"
@@ -103,11 +104,28 @@
 			"
 			id="cloud"
 			src="/cloud.png" />
+		</div>
 	</main>
 </template>
 
 <style scoped>
+	main {
+		z-index: -2;
+		/* border: 2px solid slateblue; */
+		/* padding: 50px; */
+		/* height: 100%; */
+		display: block;
+		/* position: relative; */
+		/* overflow-x: hidden; */
+		/* overflow-y: hidden; */
+		/* width: 500px; */
+	}
+	.clouds {
+		position: relative;
+
+	}
 	#cloud {
+		/* z-index: 40; */
 		transform: scale(0.4);
 		opacity: 0.04;
 		animation-name: move;
