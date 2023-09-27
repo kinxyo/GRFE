@@ -47,21 +47,42 @@
 	#quick-link {
 		font-weight: 900;
 	}
-	@media (max-width: 722px) {
+	@media (max-width: 836px) {
 		main {
 			padding-inline: 0.5rem;
 		}
 		#quick-link {
-			font-size: 1rem;
+			font-size: 1.2rem;
 		}
 	}
-	@media (max-width: 598px) {
+	@media (max-width: 676px) {
+		#link-container {
+			margin-right: 1.4rem;
+		}
 		#quick-link {
+			/* border: 2px solid slateblue; */
 			display: grid;
 			place-items: end;
 			grid-template-columns: 1fr 1fr;
 			font-size: medium;
-			gap: 0.5rem;
+			gap: 0.1rem;
+		}
+	}
+	@media (max-width: 495px) {
+		#link-container {
+			margin-right: 1.4rem;
+			gap: 0.3rem;
+		}
+		.upper-logos {
+			font-size: large;
+		}
+		#quick-link {
+			/* border: 2px solid slateblue; */
+			display: grid;
+			place-items: end;
+			grid-template-columns: 1fr 1fr;
+			font-size: smaller;
+			gap: 0;
 		}
 	}
 

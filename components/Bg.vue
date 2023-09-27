@@ -114,24 +114,26 @@
 		/* border: 2px solid slateblue; */
 		/* padding: 50px; */
 		/* height: 100%; */
-		display: block;
+		/* display: block; */
 		/* position: relative; */
+		/* position: absolute; */
 		/* overflow-x: hidden; */
 		/* overflow-y: hidden; */
 		/* width: 500px; */
 	}
 	.clouds {
+		/* overflow-x: hidden; */
 		position: relative;
-
 	}
 	#cloud {
-		/* z-index: 40; */
+		/* z-index: 5; */
 		transform: scale(0.4);
 		opacity: 0.04;
 		animation-name: move;
 		animation-iteration-count: infinite;
 		animation-timing-function: linear;
 		animation-direction: alternate;
+		/* position: relative; */
 		position: absolute;
 	}
 

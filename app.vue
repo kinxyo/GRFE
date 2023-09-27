@@ -1,12 +1,12 @@
 <script setup lang="ts">
-	import { useScroll } from "@vueuse/core";
+	// import { useScroll } from "@vueuse/core";
 
-	const el = ref<HTMLElement | null>(null);
-	const { y } = useScroll(el);
+	// const el = ref<HTMLElement | null>(null);
+	// const { y } = useScroll(el);
 </script>
 <template>
 	<div class="main-containter-app">
-		<Curtain v-if="y <= 717" ref="el" />
+		<!-- <Curtain v-if="y <= 717" ref="el" /> -->
 		<NuxtLayout>
 			<NuxtPage />
 		</NuxtLayout>
@@ -14,11 +14,15 @@
 </template>
 
 <style>
+html {
+	overflow-x: hidden;
+}
 	body {
 		margin: 0;
 		background: linear-gradient(315deg, #a3abb4 0%, #cbd5e1 50%, #dde7f3 100%);
 		overflow-y: scroll;
 		overflow-x: hidden;
+		/* position: relative; */
 	}
 	/* for chrome */
 	*::-webkit-scrollbar {

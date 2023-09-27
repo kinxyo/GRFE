@@ -20,19 +20,42 @@
 		width: 27rem;
 		/* height: ; */
 	}
-	@media (max-width: 958px) {
+	@media (max-width: 1076px) {
 		#logo {
-			height: 5rem;
-			width: 12rem;
-			top: 5rem;
-			left: 5rem;
+			height: 10rem;
+			width: 24rem;
+			top: 4rem;
+			left: 4rem;
 		}
+	}
+	@media (max-width: 942px) {
+		#logo {
+			height: 8rem;
+			width: 18rem;
+			top: 4rem;
+			left: 4rem;
+		}
+		
+	}
+	@media (max-width: 850px) {
+		#logo {
+			left: 3rem;
+		}
+		
 	}
 	@media (max-width: 770px) {
 		#logo {
-			height: 5rem;
-			width: 12rem;
+			height: 6rem;
+			width: 14rem;
 			left: 2rem;
+		}
+	}
+	@media (max-width: 495px) {
+		#logo {
+			height: 4rem;
+			width: 10rem;
+			left: 1rem;
+			top: 4rem;
 		}
 	}
 </style>

@@ -1,10 +1,10 @@
 <template>
-	<div class="index-container grid grid-rows-2 gap-12">
+	<div class="index-container border-3 flex flex-col gap-5">
 		<div class="homepage-intro grid place-items-center gap-6">
 			<div class="intro-text font-spacegro text-center w-1/4 text-xl flex-col flex gap-5">
-				<div class="grid grid-rows-2 place-items-center gap-3">
+				<div class="logo-title grid grid-rows-2 place-items-center gap-3">
 					<img class="h-28" src="/india.png" />
-					<h1 class="font-rubik font-black text-2xl">
+					<h1 class="titleapp font-rubik font-black text-2xl">
 						Department of Administrative Reforms & Public Grievances.
 					</h1>
 				</div>
@@ -105,12 +105,62 @@
 			/* border: 2px solid red; */
 			width: 80%;
 		}
-
+		
 	}
-
-	@media (max-width: 598px) {
+	
+	@media (max-width: 676px) {
+		.homepage-intro {
+			display: flex;
+			flex-direction: column;
+			height: fit-content;
+		}
 		.flogo {
 			padding: 15%;
+		}
+		.detail {
+			/* border: 2px solid red; */
+			width: 90%;
+		}
+	}
+	@media (max-width: 676px) {
+		.flogo {
+			padding: 5%;
+		}
+		.features {
+			/* border: 2px solid slateblue; */
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+		}
+		.detail {
+			/* font-size: smaller; */
+			width: 50%;
+		}
+		#three {
+			margin-bottom: 7rem;
+		}
+	}
+
+	@media (max-width: 495px) {
+		.logo-title {
+			gap: 0;
+		}
+		img {
+			height: 8rem;
+		}
+		.titleapp {
+			font-size: medium;
+		}
+		.index-container {
+			gap: 6rem;
+		}
+		.intro-text {
+			gap: 0;
+			width: 70%;
+		}
+		.flogo {
+			padding: 3rem;
 		}
 	}
 </style>
