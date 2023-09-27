@@ -21,10 +21,13 @@
 <template>
 	<main class="z-3">
 		<section id="relevant">
-			<div class="info overflow-scroll grid grid-cols-2 h-fit p-3 place-items-center">
+			<div
+				class="info overflow-scroll grid grid-cols-2 h-fit p-3 place-items-center">
 				<div class="warn order-2 flex flex-col items-center">
 					<div class="block">
-						<h1 class="text-xl"><b>Issues which are not taken up for redress:</b></h1>
+						<h1 class="text-xl">
+							<b>Issues which are not taken up for redress:</b>
+						</h1>
 						<div class="points mt-2 grid grid-cols-2">
 							<p id="rti">></p>
 							<p id="court-related-matters">></p>
@@ -36,7 +39,8 @@
 							<p class="mt-3 text-sm w-fit">
 								Grievances of Government employees concerning their service
 								matters including disciplinary proceedings etc. unless the
-								aggrieved employee has already exhausted the prescribed channels.
+								aggrieved employee has already exhausted the prescribed
+								channels.
 							</p>
 						</div>
 					</div>
@@ -74,7 +78,7 @@
 							Centralised Public Grievance Redress and Monitoring System
 							(CPGRAMS) is an online platform available to the citizens 24x7 to
 							lodge their grievances to the public authorities on any subject
-							related to service delivery. It is a single portal connected to all the Ministries/Departments of Government of India and States. Every Ministry and States have role-based access to this system.
+							related to service delivery.
 						</p>
 					</div>
 					<div class="block">
@@ -146,30 +150,6 @@
 		color: transparent;
 		padding: 2px;
 	}
-	@media (max-width: 830px) {
-		.info {
-			display: flex;
-			flex-direction: column;
-		}
-		.block {
-			font-size: smaller;
-			width: 100%;
-			flex: 1;
-		}
-		.about {
-			order: 2;
-		}
-		.warn {
-			order: 1;
-		}
-		.about,
-		.warn {
-			display: flex;
-			flex-direction: column;
-			justify-content: center;
-			align-items: center;
-		}
-	}
 	#court-related-matters::after {
 		content: " Court related matters";
 		/* background-color: aliceblue; */
@@ -180,25 +160,7 @@
 	#rti::after {
 		content: " RTI matters";
 	}
-	@media (max-width: 450px) {
-		h1 {
-			text-align: center;
-		}
-		#court-related-matters::after {
-			content: " Court matters";
-			/* background-color: aliceblue; */
-		}
-		#religious-matters::after {
-			content: " Religious";
-		}
-		#rti::after {
-			content: " RTI";
-		}
-		#aboutcpgrams {
-			content: " ";
-		}
-	}
-	#aboutcpgrams {
+	#aboutcpgrams::after {
 		content: " The status of the grievance filed in CPGRAMS can be tracked with the unique registration ID provided at the time of registration of the complainant. CPGRAMS also provides appeal facility to the citizens if they are not satisfied with the resolution by the Grievance Officer. After closure of grievance if the complainant is not satisfied with the resolution, he/she can provide feedback. If the rating is 'Poor' the option to file an appeal is enabled. The status of the Appeal can also be tracked by the petitioner with the grievance registration number.";
 	}
 	h1 {
@@ -251,8 +213,50 @@
 		/* Code for Firefox */
 		background-color: rgb(12, 225, 161);
 	}
-	
+
 	*::selection {
 		background-color: rgb(12, 225, 161);
+	}
+	@media (max-width: 830px) {
+		.info {
+			display: flex;
+			flex-direction: column;
+		}
+		.block {
+			font-size: smaller;
+			width: 100%;
+			flex: 1;
+		}
+		.about {
+			order: 2;
+		}
+		.warn {
+			order: 1;
+		}
+		.about,
+		.warn {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+		}
+	}
+	@media (max-width: 450px) {
+		h1 {
+			text-align: center;
+		}
+		#court-related-matters::after {
+			content: " Court matters";
+			/* background-color: aliceblue; */
+		}
+		#religious-matters::after {
+			content: " Religious";
+		}
+		#rti::after {
+			content: " RTI";
+		}
+		#aboutcpgrams::after {
+			content: " It is a single portal connected to all the Ministries/Departments of Government of India and States. Every Ministry and States have role-based access to this system.";
+		}
 	}
 </style>

@@ -19,18 +19,18 @@
 				@click="accmodal = true"
 					id="account"
 					style="cursor: pointer"
-					name="material-symbols:account-circle" />
+					name="ic:twotone-settings" />
 			</div>
 			<!-- <div id="space-saver">=</div> -->
 			<div
 				id="quick-link"
 				class="flex flex-nowrap shrink-0 gap-8 text-2xl font-pathex items-baseline">
 				<NuxtLink class="butt" to="/">Home</NuxtLink>
-				<NuxtLink active-class="open" class="butt" to="/about">Lodge</NuxtLink>
-				<NuxtLink active-class="open" class="butt" to="/contact"
+				<NuxtLink active-class="open" class="butt" to="/lodge">Lodge</NuxtLink>
+				<NuxtLink active-class="open" class="butt" to="/dashboard"
 					>Dashboard</NuxtLink
 				>
-				<NuxtLink active-class="open" class="butt" to="/faq">Appeal</NuxtLink>
+				<NuxtLink active-class="open" class="butt" to="/appeal">Appeal</NuxtLink>
 			</div>
 		</div>
 

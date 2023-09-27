@@ -15,9 +15,9 @@
 				</p>
 			</div>
 			<div class="important-buttons">
-				<NuxtLink class="button" to="">Contact Us</NuxtLink>
-				<NuxtLink class="button" to="">FAQ</NuxtLink>
-				<NuxtLink class="button" to="">About Us</NuxtLink>
+				<NuxtLink class="button" to="/contact">Contact Us</NuxtLink>
+				<NuxtLink class="button" to="/faq">FAQ</NuxtLink>
+				<NuxtLink class="button" to="/about">About Us</NuxtLink>
 			</div>
 		</div>
 
