@@ -64,19 +64,6 @@
 		font-weight: 900;
 		font-size: large;
 	}
-	.button {
-		padding: 7px;
-		font-family: Poppins;
-		margin-inline: 0.5rem;
-		box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.093);
-		transition: 0.1s ease;
-		backdrop-filter: blur(20px);
-		border-radius: 0.4rem;
-		cursor: pointer;
-	}
-	.button:hover {
-		background-color: rgba(0, 0, 0, 0.055);
-	}
 	.features {
 		background: linear-gradient(90deg, #854ce838 0%, #7c195467 100%);
 		/* background-color: rgba(34, 34, 34, 0.309); */

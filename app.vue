@@ -14,9 +14,9 @@
 </template>
 
 <style>
-html {
-	overflow-x: hidden;
-}
+	html {
+		overflow-x: hidden;
+	}
 	body {
 		margin: 0;
 		background: linear-gradient(315deg, #a3abb4 0%, #cbd5e1 50%, #dde7f3 100%);
@@ -46,5 +46,29 @@ html {
 
 	.page-move {
 		transition: all 0.2s ease;
+	}
+	.button {
+		padding: 7px;
+		font-family: Poppins;
+		margin-inline: 0.5rem;
+		box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.093);
+		transition: 0.1s ease;
+		backdrop-filter: blur(20px);
+		border-radius: 0.4rem;
+		cursor: pointer;
+	}
+	.button:hover {
+		background-color: rgba(0, 0, 0, 0.055);
+	}
+	@media (max-width: 700px) {
+		.button {
+			font-size: small;
+		}
+	}
+	@media (max-width: 400px) {
+		.button {
+			font-size: x-small;
+			/* font-size: smaller; */
+		}
 	}
 </style>

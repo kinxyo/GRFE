@@ -4,9 +4,12 @@
             <Icon size="200" name="codicon:account" />
 			<h1>Your Name</h1>
 		</div>
-		<p>
-			I'm dead from inside.
-		</p>
+		<div class="table text-center">
+			<h3><u>Stats</u></h3>
+			<br>
+			<Icon size="50" name="uiw:table" />
+			<!-- <Icon size="50" name="teenyicons:table-solid" /> -->
+		</div>
 	</div>
 </template>
 

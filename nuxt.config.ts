@@ -10,6 +10,7 @@ export default defineNuxtConfig({
       "Space+Grotesk": true,
       "Pathway+Extreme": true,
       "Josefin+Sans": true,
+      "Inclusive+Sans": true,
       "Titillium+Web": true,
       Raleway: true,
       Comme: true,
