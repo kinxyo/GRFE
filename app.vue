@@ -1,12 +1,12 @@
 <script setup lang="ts">
-	// import { useScroll } from "@vueuse/core";
+	import { useScroll } from "@vueuse/core";
 
-	// const el = ref<HTMLElement | null>(null);
-	// const { y } = useScroll(el);
+	const el = ref<HTMLElement | null>(null);
+	const { y } = useScroll(el);
 </script>
 <template>
 	<div class="main-containter-app">
-		<!-- <Curtain v-if="y <= 717" ref="el" /> -->
+		<Curtain v-if="y <= 717" ref="el" />
 		<NuxtLayout>
 			<NuxtPage />
 		</NuxtLayout>

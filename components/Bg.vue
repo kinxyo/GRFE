@@ -139,6 +139,7 @@
 
 	@keyframes move {
 		from {
+			visibility: visible;
 			left: 100%;
 			right: 0;
 		}
@@ -151,5 +152,6 @@
 	img {
 		box-shadow: 2px 2px 5px 5px rgba(33, 33, 33, 0.54);
 		filter: invert(100);
+		visibility: hidden;
 	}
 </style>

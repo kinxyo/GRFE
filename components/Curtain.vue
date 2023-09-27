@@ -21,59 +21,26 @@
 <template>
 	<main class="z-3">
 		<section id="relevant">
-			<div class="info">
-				<div id="about">
+			<div class="info overflow-scroll grid grid-cols-2 h-fit p-3 place-items-center">
+				<div class="warn order-2 flex flex-col items-center">
 					<div class="block">
-						<h1 class="text-md font-bold">ABOUT CPGRAMS</h1>
-						<p>
-							Centralised Public Grievance Redress and Monitoring System
-							(CPGRAMS) is an online platform available to the citizens 24x7 to
-							lodge their grievances to the public authorities on any subject
-							related to service delivery. It is a single portal connected to
-							all the Ministries/Departments of Government of India and States.
-							Every Ministry and States have role-based access to this system.
-							The status of the grievance filed in CPGRAMS can be tracked with the unique
-							registration ID provided at the time of registration of the
-							complainant. CPGRAMS also provides appeal facility to the citizens
-							if they are not satisfied with the resolution by the Grievance
-							Officer. After closure of grievance if the complainant is not
-							satisfied with the resolution, he/she can provide feedback. If the
-							rating is 'Poor' the option to file an appeal is enabled. The
-							status of the Appeal can also be tracked by the petitioner with
-							the grievance registration number.
-						</p>
-					</div>
-					<div class="block">
-						<h2>Preliminary Information</h2>
-						<p>Scroll down to continue to website</p>
-					</div>
-				</div>
-
-				<div id="warn">
-					<div class="block">
-						<h2 class="text-3xl">Issues which are not taken up for redress:</h2>
-						<ul class="list-disc">
-							<li>RTI Matters</li>
-							<li>Court related / Subjudice matters</li>
-							<li>Religious matters</li>
-							<li>Suggestions</li>
-							<li>
+						<h1 class="text-xl"><b>Issues which are not taken up for redress:</b></h1>
+						<div class="points mt-2 grid grid-cols-2">
+							<p id="rti">></p>
+							<p id="court-related-matters">></p>
+							<p id="religious-matters">></p>
+							<p>> Suggestions</p>
+						</div>
+						<div class="lastpoint flex">
+							<p class="h-fit mt-3">></p>
+							<p class="mt-3 text-sm w-fit">
 								Grievances of Government employees concerning their service
 								matters including disciplinary proceedings etc. unless the
-								aggrieved employee has already exhausted the prescribed channels
-								keeping in view the DoPT OM No. 11013/08/2013-Estt.(A-III) dated
-								31.08.2015
-							</li>
-						</ul>
+								aggrieved employee has already exhausted the prescribed channels.
+							</p>
+						</div>
 					</div>
-					<div
-						style="
-							height: 42%;
-							display: flex;
-							flex-direction: column;
-							justify-content: space-between;
-						"
-						class="block">
+					<div class="block flex-col h-fit justify-center items-center">
 						<Transition name="banner" mode="out-in">
 							<div style="height: 80%; padding: 0" :key="`/banner${no}.jpg`">
 								<img
@@ -83,7 +50,7 @@
 									:src="`/banner${no}.jpg`" />
 							</div>
 						</Transition>
-						<div class="tray">
+						<div class="tray mt-5 flex justify-center h-fit">
 							<span
 								:style="no == 1 && { backgroundColor: '#e8d9dbb3' }"
 								@click="no = 1"
@@ -99,6 +66,22 @@
 						</div>
 					</div>
 				</div>
+
+				<div class="about order-1 flex flex-col items-center">
+					<div class="block">
+						<h1 class="text-md font-bold">ABOUT CPGRAMS</h1>
+						<p id="aboutcpgrams">
+							Centralised Public Grievance Redress and Monitoring System
+							(CPGRAMS) is an online platform available to the citizens 24x7 to
+							lodge their grievances to the public authorities on any subject
+							related to service delivery. It is a single portal connected to all the Ministries/Departments of Government of India and States. Every Ministry and States have role-based access to this system.
+						</p>
+					</div>
+					<div class="block">
+						<h1>Preliminary Information</h1>
+						<p>Scroll down to continue to website</p>
+					</div>
+				</div>
 			</div>
 		</section>
 		<section id="waste"></section>
@@ -110,11 +93,6 @@
 		filter: brightness(0.9) contrast(1) opacity(0.9);
 		border: 1px solid rgb(223, 220, 220);
 		/* box-shadow: 1px 1px 20px rgba(0, 0, 0, 0.154); */
-	}
-	.tray {
-		display: flex;
-		justify-content: center;
-		height: fit-content;
 	}
 	.slide {
 		border-radius: 50%;
@@ -148,6 +126,7 @@
 	#relevant {
 		display: flex;
 		flex-direction: column;
+		border: 2px solid slateblue;
 		/* background-color: rgba(245, 245, 245, 0.07); */
 		color: #cbd5e1d1;
 		background: linear-gradient(315deg, #c92e3d 0%, #a12430 50%, #6f1922 100%);
@@ -167,46 +146,75 @@
 		color: transparent;
 		padding: 2px;
 	}
-	.info {
-		overflow: scroll;
-		display: grid;
-		padding: 0.4%;
-		grid-template-columns: 1fr 1fr;
-		height: fit-content;
-	}
 	@media (max-width: 830px) {
 		.info {
 			display: flex;
-			flex-direction: column-reverse;
+			flex-direction: column;
 		}
 		.block {
 			font-size: smaller;
 			width: 100%;
 			flex: 1;
 		}
-		#about,
-		#warn {
+		.about {
+			order: 2;
+		}
+		.warn {
+			order: 1;
+		}
+		.about,
+		.warn {
 			display: flex;
 			flex-direction: column;
 			justify-content: center;
 			align-items: center;
 		}
 	}
-	h1,
-	h2 {
-		font-family: Josefin Sans;
+	#court-related-matters::after {
+		content: " Court related matters";
+		/* background-color: aliceblue; */
 	}
-	#warn {
-		display: flex;
-		flex-direction: column;
-		flex-shrink: 1;
+	#religious-matters::after {
+		content: " Religious matters";
+	}
+	#rti::after {
+		content: " RTI matters";
+	}
+	@media (max-width: 450px) {
+		h1 {
+			text-align: center;
+		}
+		#court-related-matters::after {
+			content: " Court matters";
+			/* background-color: aliceblue; */
+		}
+		#religious-matters::after {
+			content: " Religious";
+		}
+		#rti::after {
+			content: " RTI";
+		}
+		#aboutcpgrams {
+			content: " ";
+		}
+	}
+	#aboutcpgrams {
+		content: " The status of the grievance filed in CPGRAMS can be tracked with the unique registration ID provided at the time of registration of the complainant. CPGRAMS also provides appeal facility to the citizens if they are not satisfied with the resolution by the Grievance Officer. After closure of grievance if the complainant is not satisfied with the resolution, he/she can provide feedback. If the rating is 'Poor' the option to file an appeal is enabled. The status of the Appeal can also be tracked by the petitioner with the grievance registration number.";
+	}
+	h1 {
+		font-family: Josefin Sans;
+		/* padding: 0.1rem; */
+	}
+	p {
+		padding: 0.2rem;
+		/* border: 2px solid slateblue; */
 	}
 	.block {
 		/* background-color: rgba(21, 21, 21, 0.39); */
-		padding: 20px;
+		padding: 1rem;
 		width: 85%;
 		backdrop-filter: blur(20px);
-		height: fit-content;
+		/* height: fit-content; */
 		border-radius: 40px;
 		box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.199);
 		margin-top: 10px;
@@ -241,10 +249,10 @@
 	}
 	*::-moz-selection {
 		/* Code for Firefox */
-		background-color: rgb(225, 12, 108);
+		background-color: rgb(12, 225, 161);
 	}
-
+	
 	*::selection {
-		background-color: rgb(225, 12, 108);
+		background-color: rgb(12, 225, 161);
 	}
 </style>
