@@ -27,7 +27,7 @@
 				<h2>AI Assistance</h2>
 				<div class="detail">
 					<p>
-						lntroducing an Al-based chatbot that allows citizens to dictate
+						lntroducing <b>LodgerAI</b> which allows citizens to dictate
 						their grievances in their local language and lodge them.
 					</p>
 				</div>
@@ -37,8 +37,8 @@
 				<h2>Multilingual</h2>
 				<div class="detail">
 					<p>
-						Supports most of the local languages of India. Also provides
-						<b>speech-to-text</b> support for them.
+						Support for local Indian languages for better inclusion of all people.
+						<b>Speech-To-Text</b> support for each language is coming soon.
 					</p>
 				</div>
 			</section>
@@ -47,8 +47,7 @@
 				<h2>Realtime-Tracking</h2>
 				<div class="detail">
 					<p>
-						Real-time updates on the status of the complaint should be sent to
-						citizens, enabling one-on-one conversations throughout the grievance
+						Quickly recieve updates on the status of the complaint, enabling one-on-one conversations throughout the grievance
 						lifecycle.
 					</p>
 				</div>

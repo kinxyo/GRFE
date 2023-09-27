@@ -8,6 +8,7 @@ export default defineNuxtConfig({
   googleFonts: {
     families: {
       "Space+Grotesk": true,
+      "Sedgwick+Ave+Display": true,
       "Pathway+Extreme": true,
       "Josefin+Sans": true,
       "Inclusive+Sans": true,
@@ -20,6 +21,8 @@ export default defineNuxtConfig({
       Ysabeau: true,
       Sigmar: true,
       Kanit: true,
+      Nunito: true,
+      "PT+Sans": true,
       Quicksand: true,
     },
     display: "swap",

@@ -1,2 +1,2 @@
 # Frontend Testing
-[Check it out](https://kinjalk-grfe.netlify.app/)
+[Preview](https://kinjalk-grfe.netlify.app/)

@@ -3,6 +3,16 @@
 
 	const el = ref<HTMLElement | null>(null);
 	const { y } = useScroll(el);
+	useHead({
+		title: "RedressPortal",
+		meta: [
+			{
+				name: "Grievance Redressal Web App Portal",
+				content:
+					"This site allows for grievance redressal via an AI-based mechanism which aims to simply the process and give a better user experience.",
+			},
+		],
+	});
 </script>
 <template>
 	<div class="main-containter-app">

@@ -22,7 +22,7 @@
 	<main class="z-3">
 		<section id="relevant">
 			<div
-				class="info overflow-scroll grid grid-cols-2 h-fit p-3 place-items-center">
+				class="info  overflow-scroll grid grid-cols-2 h-fit p-3 place-items-center">
 				<div class="warn order-2 flex flex-col items-center">
 					<div class="block">
 						<h1 class="text-xl">
@@ -87,6 +87,7 @@
 					</div>
 				</div>
 			</div>
+			<div id="indicator" class="text-8xl" @click="scroll">v</div>
 		</section>
 		<section id="waste"></section>
 	</main>
@@ -119,18 +120,17 @@
 		height: 100vh;
 	}
 	#indicator {
-		/* cursor-pointer h-fit w-fit self-center text-6xl */
+		font-family:  PT Sans;
 		cursor: pointer;
 		height: fit-content;
 		width: fit-content;
 		align-self: center;
-		font-size: 10vh;
 		animation: heart 1s ease-in-out infinite alternate;
 	}
 	#relevant {
 		display: flex;
 		flex-direction: column;
-		border: 2px solid slateblue;
+		/* border: 2px solid slateblue; */
 		/* background-color: rgba(245, 245, 245, 0.07); */
 		color: #cbd5e1d1;
 		background: linear-gradient(315deg, #c92e3d 0%, #a12430 50%, #6f1922 100%);
@@ -187,12 +187,10 @@
 	@keyframes heart {
 		from {
 			transform: scale(1);
-			transform: rotate(90deg);
 		}
 		to {
 			transform: scale(1.1);
-			transform: rotate(90deg);
-			color: rgb(146, 19, 78);
+			color: rgb(146, 19, 25);
 		}
 	}
 
