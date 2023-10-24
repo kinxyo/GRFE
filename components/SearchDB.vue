@@ -66,11 +66,11 @@ function logging() {
 		table-layout: fixed;
 	}
 	th {
-		font-size: large;
+		font-size: medium;
 		text-align: start;
 	}
 	td {
-		font-size: medium;
+		font-size: small;
 	}
 	.search-container {
 		/* padding: 1rem; */
@@ -91,7 +91,7 @@ function logging() {
 		background-color: rgba(158, 158, 164, 0.087);
 		border-radius: 1rem;
 		margin-bottom: 0.5rem;
-		padding: 1rem;
+		padding: 0.5rem;
 		cursor: pointer;
 	}
 	p:hover {
