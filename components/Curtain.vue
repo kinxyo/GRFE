@@ -20,9 +20,9 @@
 </script>
 <template>
 	<main class="z-3">
-		<section id="relevant">
+		<section id="relevant" class="flex justify-evenly">
 			<div
-				class="info  overflow-scroll grid grid-cols-2 h-fit p-3 place-items-center">
+				class="info overflow-scroll grid grid-cols-2 h-fit p-3 place-items-center">
 				<div class="warn order-2 flex flex-col items-center">
 					<div class="block">
 						<h1 class="text-xl">
@@ -87,7 +87,7 @@
 					</div>
 				</div>
 			</div>
-			<div id="indicator" class="text-8xl" @click="scroll">v</div>
+			<div id="indicator" @click="scroll"></div>
 		</section>
 		<section id="waste"></section>
 	</main>
@@ -125,10 +125,13 @@
 		height: fit-content;
 		width: fit-content;
 		align-self: center;
+
 		animation: heart 1s ease-in-out infinite alternate;
 	}
+	#indicator::after {
+		content: "scroll down to continue to website";
+	}
 	#relevant {
-		display: flex;
 		flex-direction: column;
 		/* border: 2px solid slateblue; */
 		/* background-color: rgba(245, 245, 245, 0.07); */
@@ -240,6 +243,9 @@
 		}
 	}
 	@media (max-width: 450px) {
+		#indicator::after {
+			content: "V";
+		}
 		h1 {
 			text-align: center;
 		}

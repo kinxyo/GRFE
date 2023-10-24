@@ -71,6 +71,7 @@
 	}
 	.features section {
 		margin-top: 1rem;
+		margin-bottom: 1.2rem;
 		font-family: Quicksand;
 		gap: 1rem;
 		display: flex;

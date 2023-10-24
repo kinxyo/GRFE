@@ -73,7 +73,7 @@ function logging() {
 		font-size: medium;
 	}
 	.search-container {
-		padding: 1rem;
+		/* padding: 1rem; */
 		background-color: rgba(245, 245, 245, 0.151);
 		backdrop-filter: blur(20px);
 		border-radius: 20px;
